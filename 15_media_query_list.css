@@ -1,0 +1,23 @@
+/* The first article about responsive design that I saw dates back to 2010. Ethan
+Marcotte is its author. Since then, the Web evolved, and so have the developers that
+are building websites. Nowadays, responsive architecture is not a question. It's the default. */
+
+/* There are a couple of tools for implementing responsive design. Probably the main
+one is media queries. It's a feature of CSS where we can specify a frame under which our
+elements behave or/and look differently. For example: */
+
+body {
+  background-color: blue;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* The background color of the body is by default blue. However, if the
+browser has a viewport width less than 800px the color becomes red. */
+
+/* For a long time, this was only available in CSS. That is not the case anymore. */
+/* we continued in 15_media_query_list.js */
