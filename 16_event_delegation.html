@@ -1,0 +1,43 @@
+<!-- I find it very interesting how when technology evolves we start
+forgetting stuff. One of these things is the event delegation. Today,
+when we pretty much always use a framework, the event bubbling and 
+capturing is not a thing anymore. The tools that we rely on are handling
+those processes. I remember how at interviews for front-end developer
+positions this was one of the common questions. -->
+
+<!-- Consider the following example: -->
+<div id="container">
+  <header>Hello</header>
+  <button id="button">call to action</button>
+</div>
+
+<script>
+  document
+    .querySelector("button")
+    .addEventListener("click", () => {});
+</script>
+
+<!-- When the page loads initially we attach a listener to the button
+element. This works well unless we touch the DOM. As soon as we replace
+the content of the container, we have to re-attach the listener. This may
+seem a silly problem now, but it was a big thing a couple of years ago. -->
+
+<!-- if we write vanilla JavaScript and have to manipulate the DOM elements,
+we should make sure that our listeners are present. One of the solutions for
+this iss to attach the listener to a parent element that doesn't change. In our
+case this is <div id="container">. Then we rely on the event.target to find out
+where the event comes from. -->
+
+<script>
+  document
+    .querySelector("#container")
+    .addEventListener('click', (event) => {
+      // event.target....
+    });
+</script>
+
+<!-- This works because of the event delegation. If not capture the event from
+each element bubbles up and we are able to catch it. -->
+
+
+
