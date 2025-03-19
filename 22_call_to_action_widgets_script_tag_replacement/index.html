@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call-to-action widgets script tag replacement</title>
+</head>
+<body>
+  <!-- Did you ever wonder how the call-to-action widgets work? You know, those
+  little buttons for sharing content on social networks. Very often they are
+  distributed as iframes, but sometimes we have to copy/paste script tags. And
+  the instructions are "Place the following code where you want the button to
+  appear". But if that is a script tag, how does it know where to inject the
+  button? The goal of this chapter is to give you an answer to this question. -->
+  <script src="./widget.js" data-color="#ff0000"></script>
+  <section>
+    Content here
+  </section>
+  <script src="./widget.js" data-color="#00ff00"></script>
+  <!-- We want to see is a link followed by "Content here" followed by another
+  link. Notice, that we not only want to replace those script tags. We want
+  different results for each one of them. The color of the button should be
+  different. -->
+</body>
+</html>
