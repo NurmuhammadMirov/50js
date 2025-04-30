@@ -24,3 +24,39 @@ function outerFn() {
 
 const innerFn = outerFn();
 innerFn();
+
+// --How do closures work?--
+// To understand how closures work, we need to understand how JavaScript resolves the scope of any identifier.
+// Consider the following code example:
+
+let isReading = true;
+
+function learningJavaScript() {
+  console.log(isReading);
+}
+
+learningJavaScript();
+
+// When the learningJavaScript function is invoked to log the value of the isReading variable, the
+// JavaScript first needs to identify where it is defined. The first place where JavaScript will search
+// is the local scope of the learnJavaScript function because this is where a reference to the isReading 
+// variable was found.
+
+// As the isReading variable is not defined in the local scope of the learnJavaScript function, JavaScript
+// will search for this variable in the outer scope, which in this case is the global scope. JavaScript will
+// find the declaration of the isReading variable in the global scope, so it will get its value and pass
+// it to the console.log function so that it can be logged to the console.
+
+// Let us take a look at another code example that involves a nested function:
+
+function learnJS() {
+  function stepsToLEarnJS() {
+    console.log(isReading);
+  }
+
+  stepsToLEarnJS();
+}
+
+learnJS();
+
+// JavaScript traverses to the outer scope to seach for the variable.
