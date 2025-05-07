@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debounce Demo</title>
+  <style>
+    body {font-family: sans-serif; padding: 2rem;}
+    input {padding: 0.5rem; width: 300px; font-size: 16px;}
+  </style>
+</head>
+<body>
+  <h2>Debounced Search</h2>
+  <input type="text" id="search" placeholder="Start typing...">
+  <div id="result"></div>
+
+  <script type="module">
+    import { debounce } from './debounce.js';
+
+    const result = document.getElementById('result');
+
+    function fakeSearch(query) {
+      result.textContent = `Searching for: "${query}" at ${new Date().toLocaleTimeString()}`;
+    }
+
+    const debouncedSearch = debounce(fakeSearch, 500);
+
+    document.getElementById('search').addEventListener('input', (e) => {
+      debouncedSearch(e.target.value);
+    });
+  </script>
+</body>
+</html>
