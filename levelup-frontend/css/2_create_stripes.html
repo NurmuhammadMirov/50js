@@ -1,0 +1,30 @@
+<div class="container"></div>
+
+<style>
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #212336;
+    display: grid;
+    place-content: center;
+  }
+
+  .container {
+    width: 300px;
+    height: 150px;
+    background-image: repeating-linear-gradient(
+      45deg,
+      deeppink 0,
+      deeppink 40px,
+      white 40px,
+      white 80px
+    );
+  }
+</style>
