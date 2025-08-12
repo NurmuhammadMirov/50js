@@ -16,3 +16,9 @@ function convertColorToHex(color) {
 }
 
 convertColorToHex("Khaki");
+
+// This function accepts a string containing a web color name and converts it into its corresponding hex value.
+
+/* Discussion */
+// Hexadecimal notation is commonly used to specify colors in programs and we development because it provides
+// a compact and efficient way to represent a wide range of colors. 

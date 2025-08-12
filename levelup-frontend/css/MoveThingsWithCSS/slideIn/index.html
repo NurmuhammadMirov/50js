@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slideIn</title>
+  <style>
+    body {
+      min-height: 100vh;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+            align-items: center;
+      -webkit-box-pack: center;
+          justify-content: center;
+        background: #00b288;
+    }
+    .bear {
+      height: 25vmin;
+      -webkit-animation-name: slide-in;
+              animation-name: slide-in;
+      -webkit-animation-duration: 3s;
+              animation-duration: 3s;
+    }
+
+    @-webkit-keyframes slide-in {
+      from {
+        translate: 150vw 0;
+        sclae: 200% 1
+      }
+
+      to {
+        translate: 0 0;
+        scale: 100% 1;
+      }
+    }
+
+    @keyframes slide-in {
+      from {
+        translate: 150vw 0;
+        scale: 200%
+      }
+
+      to {
+        translate: 0 0;
+        scale: 100% 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="bear" src="../images/avatar.png" />
+</body>
+</html>
