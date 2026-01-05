@@ -183,8 +183,48 @@ p {
         </header>
     </div>
 */
-/* ---------------Element Selector-------------- */
-/* ---------------Element Selector-------------- */
+/* ---------------Pseudo-classes-------------- */
+/* 
+    A pseudo-class allows you to select elements based on some special state of the elements,
+    in addition to all; the selectors discussed previously. Pseudo-classes start with a colon(:)
+    character and can be used alone or combined with other selectors.
+        Some pseudo-classes let you select elements based on interaction state (such as :focus or
+        :hover), while others let you select elements based on their position in the document (such
+        as :first-child)
+*/
+
+/* ---------------Interaction State-------------- */
+/* 
+    These pseudo-classes are based on some user interaction state:
+
+    :active
+    Matches an element that is currently being activated. For buttons and links, this usually
+    means the mouse button has been pressed, but not yet released.
+
+    :checked
+    Matches a radio button, checkbox, or option inside a select element that is checked or selected.
+
+    :focus
+    Matches an element that currently has the input focus. This is typically used for buttons, links
+    and text fields.
+
+    :focus-within
+    Similar to :focus but also matches an element that has a descendant element that is 
+    currently focused.
+
+    :hover
+    Matches an element that the mouse cursor is currently hovering over. This is typically
+    used fot buttons and links but can be applied to any type of element.
+
+    :valid, :invalid
+    Used with form elements using the HTML validation API. :valid matches an element which
+    is currently valid according to validation rules, and :invalid matches an element which
+    is not currently valid.
+
+    :visited
+    Matches a link whose URL has already been visited by the user. To protext a user's privacy,
+    the browser limits what styling can be applied to an element matched by this pseudo-class.
+*/
 /* ---------------Element Selector-------------- */
 /* ---------------Element Selector-------------- */
 /* ---------------Element Selector-------------- */
