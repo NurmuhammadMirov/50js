@@ -1,0 +1,191 @@
+/* Basic Selectors Types */
+/* 
+    * Universal
+    * Element
+    * ID
+    * Class
+    * Attribute
+*/
+
+/* Removing all margins with the universal selector */
+* {
+    margin: 0;
+}
+
+/* ---------------Element Selector-------------- */
+/* Applying a margin to all p elements */
+p {
+    margin: 25px;
+}
+
+/* ---------------ID Selector-------------- */
+/* Applying padding to the element with an id of header */
+#header {
+    padding: 25px;
+}
+
+/* ---------------Class Selector-------------- */
+/* Applying a color to all elements with the class nav-link */
+.nav-link {
+    color: darkcyan;
+}
+
+/* ---------------Attribute Selector-------------- */
+/* 
+    [name]
+    Selects all elements that have the given attribute, regardless of its value 
+*/
+
+/* 
+    [name="value"]
+    Selects all elements that have the given attribute, whose value is the exaxt string value.
+*/
+
+/* 
+    [name~="value"]
+    Selects all elements that have the given attribute, whose value contains the string value
+    separated by whitespace.
+
+    Example:
+    <div title="Hello World">Hello World</div>
+    <div title="HelloWorld">HelloWorld</div>
+
+    If you wrote a CSS rule with the selector [title~="World"], the first element would
+    match but not the second. This is because in second element, the word "World" in the
+    title attribute is not surrounded by whitespace.
+*/
+
+/* 
+    [name*="value"]
+    Selects all elements that have the given attribute, whose value contains the substring
+    value. If we wrote another CSS rule, this time with the selector [title*="World"], it
+    would match both elements. 
+*/
+
+/* 
+    [name^="value"]
+    Selects all elements that have the given attribute, whose value begins with value.
+*/
+
+/* 
+    [name$="value"]
+    Selects all elements that have the given attribute, whose value ends with value.
+*/
+
+/* ---------------Compound Selector-------------- */
+/* 
+    Any of the above selectors (except for the universal selector) can be used alone or
+    in combination with other selectors to make the selector more specific. This is best
+    illustrated with some examples:
+
+    div.my-class
+    Matches all div elements with a class of my-class
+
+    span.class-one.class-two
+    Matches all span elements with a class of both class-one and class-two
+
+    a.nav-link[href*="example.com"]
+    Matches all a elements with a class of nav-link that have an href attribute containing
+    the string example.com
+*/
+
+/* ---------------Multiple Independent Selectors-------------- */
+/* 
+    A CSS rule can have multiple selectors separated by a comma. The rule will be applied
+    to any element that is matched by any one of the given selectors:
+
+    .class-one, .class-two
+    Matches all elements with a class of class-one as well all elements with a 
+    class of class-two.
+*/
+
+/* ---------------Descendant Combinator-------------- */
+/* 
+    The descendant combinator matches an element that is a descendant of the element on the
+    left-hand side. Descendant means that the element exists somewhere within the child
+    hierarchy - it does not have to be a direct child.
+        The descendant combinator is specified with a space character.
+
+        Example:
+        .header div {
+            color: green;
+        }
+
+        This selector matches all div elements that are direct or indirect descendants of any
+        element with the class header. If these div elements contain additional div elements as
+        children, those child div elements will also be matched by the selector.
+*/
+
+/* ---------------Child Combinator-------------- */
+/* 
+    The child combinator matches an element that is a direct child of the element on the left-hand
+    side. It is specified with a > character.
+
+    Example:
+    .header > div {
+        color: green;
+    }
+    
+        The selector matches all div elements that are direct children of an element with the class
+    header. If those div elements contain additional div elements as children, those div elements
+    will not be matched by the selector (because they are descendants, not direct children).
+*/
+
+/* ---------------Subsequent Sibling Combinator-------------- */
+/* 
+    The subsequent sibling combinator matches an element that is a sibling, but not necessarily
+    an immediate sibling, of the element on the left-hand side. It is specified with a ~ character.
+    It only matches siblings going forward and does not match previous siblings.
+
+    Example HTML elements:
+    <div>
+        <div class="intro"></div>
+        <div class="article1"></div>
+        <div class="article2"></div>
+        <div class="summary"></div>
+    </div>
+
+    Example subsequent sibling combinator
+    .article1 ~ div {
+        background: skyblue;
+    }
+*/
+
+/* ---------------Next Sibling Combinator-------------- */
+/* 
+    The next sibling combinator, specified with a + character, matches an elements's
+    immediate next sibling only.
+
+    Example
+    .article1 + div {
+        background: yellow;
+    }
+
+    Example a selector with multiple combinators
+    header > div + button {
+        background: gray;
+    }
+        This selector matches the button element inside the header. This works by first
+    selecting the header's immediate child, the div, then selecting that element's next
+    sibling, the button.
+*/
+
+/* ---------------Using Multiple Combinators-------------- */
+/* 
+    Just like basic selectors, combinators can be used together to form evem more specific
+    selectors.
+
+    Example HTML
+    <div>
+        <header>
+            <div>Title</div>
+            <button>Button</button>
+        </header>
+    </div>
+*/
+/* ---------------Element Selector-------------- */
+/* ---------------Element Selector-------------- */
+/* ---------------Element Selector-------------- */
+/* ---------------Element Selector-------------- */
+/* ---------------Element Selector-------------- */
+/* ---------------Element Selector-------------- */

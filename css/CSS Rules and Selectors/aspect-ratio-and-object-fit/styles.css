@@ -1,0 +1,67 @@
+.avatar-list img {
+    /* Make it a square */
+    aspect-ratio: 1;
+    /* Fit the image to it's container without distortion */
+    object-fit: cover;
+    /* Make the square round */
+    border-radius: 50%;
+    width: 100%; /* Make sure the image fills the container */
+    height: 100%; /* Make sure the image fills the container */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    place-content: center;
+    background-color: mediumvioletred;
+    padding-inline: 1rem;
+}
+
+/* Standard responsive image fix */
+img {
+    max-width: 100%;
+}
+
+.avatar-list {
+    list-style: none;
+    padding: 0;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem -0.15rem hsl(0 0% 0% / 30%);
+    border: 1px solid hsl(0 0% 0% / 10%);
+}
+
+.avatar-list li {
+    position: relative;
+    padding: 3%;
+    font-size: 1.35rem;
+    font-size: clamp(0.8rem, 0.8rem + 2cqi, 1.5rem);
+    color: hsl(0 0% 45%);
+    letter-spacing: 0.03rem;
+}
+
+.avatar-list li + li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(15% + 1rem);
+    right: 3%;
+    border-top: 1px solid hsl(0 0% 0% / 15%);
+}
+
+.avatar-list figure {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    align-items: center;
+    gap: 1rem;
+}
