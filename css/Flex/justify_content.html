@@ -38,6 +38,81 @@
             background-color: #3B82F6;
             color: white;
         }
+
+        /* card */
+        .card-wrapper {
+            display: flex;
+            justify-content: center;
+            padding-block: 20px;
+            background-color: #F1F5F9;
+            color: #555;
+        }
+
+        .card {
+            background-color: white;
+            padding: 2.5rem;
+            max-width: 16rem;
+            border-radius: 10px;
+        }
+
+        .card > h1 {
+            color: #2563EB;
+            margin: 0;
+        }
+
+        .card p {
+            line-height: 1.4;
+        }
+        .card > .links a{
+            text-decoration: none;
+            padding: 8px 15px;
+            background-color: #BFDBFE;
+            color: #222;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .card > .links {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* team profile */
+        .container h3,
+        .container p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .team-profile {
+            text-align: center;
+            padding: 15px 25px;
+        }
+
+        .team-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 50%;
+        }
+
+        .team-name {
+            margin: 15px 0 5px;
+        }
+
+        .team-role {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .container {
+            margin: 60px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
     </style>
     <title>Justify Content</title>
 </head>
@@ -50,5 +125,53 @@
             <a href="#">Settings</a>
         </div>
     </div>
+    <!-- card -->
+    <div class="card-wrapper">
+        <div class="card">
+            <h1>CSS Flex & Grid</h1>
+            <p>
+                This book takes a completely different approach. I won't teach you the things flex and grid can do. Instead, I will first show you some components and layouts and make you think how to build them using the CSS concepts you already know. Now you have a problem, and you want a solution.
+            </p>
+            <div class="links">
+                <a href="#">
+                    Prev
+                </a>
+                <a href="#">
+                    Next
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- team profile -->
+     <div class="container">
+        <div class="team-profile">
+            <img src="https://images.pexels.com/photos/7242908/pexels-photo-7242908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150" class="team-img">
+            <h3 class="team-name">
+                Alex Kardi
+            </h3>
+            <p class="team-role">Founder and CEO</p>
+        </div>
+        <div class="team-profile">
+            <img src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150" class="team-img">
+            <h3 class="team-name">
+            Tavell Monroe
+            </h3>
+            <p class="team-role">Web Developer</p>
+        </div>
+        <div class="team-profile">
+            <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150" class="team-img">
+            <h3 class="team-name">
+            Adale Smith
+            </h3>
+            <p class="team-role">Marketing Specialist</p>
+        </div>
+        <div class="team-profile">
+            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=300" class="team-img">
+            <h3 class="team-name">
+            Thomas Mason
+            </h3>
+            <p class="team-role">UX Designer</p>
+        </div>
+     </div>
 </body>
 </html>
