@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        .wrapper {
+            padding: 3rem;
+            text-align: center;
+            color: #333;
+            background-color: #F1F5F9;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .logos {
+            margin: 1.5rem auto 0;
+            display: flex;
+            justify-content: space-around;
+            /* flex-wrap: wrap-reverse; */
+            flex-wrap: wrap;
+        }
+
+        .logos img {
+            height: 3rem;
+            margin: 0 1rem 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Top Clients</h2>
+        <div class="logos">
+            <img src="https://res.cloudinary.com/thirus/image/upload/c_pad,h_100,w_200/v1628614672/logos/safe_x5alme.png" />
+            <img src="https://res.cloudinary.com/thirus/image/upload/c_pad,h_100,w_300/v1628614672/logos/circleai_dm9slt.png" />
+            <img src="https://res.cloudinary.com/thirus/image/upload/v1628617465/logos/onpoint_bikaaj.png" />
+            <img src="https://res.cloudinary.com/thirus/image/upload/c_pad,h_100,w_180/v1628617514/logos/Thirus_Logo_Tentative_twhvic.png" />
+        </div>
+    </div>
+</body>
+</html>
